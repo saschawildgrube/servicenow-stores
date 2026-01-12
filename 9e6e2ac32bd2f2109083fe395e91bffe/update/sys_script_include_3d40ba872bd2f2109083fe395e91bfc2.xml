@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_stores.DevTools</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>Implements the extension point for DevTools.
+|
+Methods:
+* initialize()
+* GetParentRecord()
+* GetLinkDirectory()
+* GetFormatConfig()
+* GetApplicationStatus()
+* RenderDebugDump()
+* GetInstancePipelineName()
+* GetEncodedQueryToPreventUselessChecks()
+* AppVersionBaselineOnFinish()
+* Prompt()
+* IsTechnicalUser()</description>
+        <mobile_callable>false</mobile_callable>
+        <name>DevTools</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DevTools = Class.create();
+DevTools.prototype = {
+	initialize: function()
+	{	
+	},
+
+	GetParentRecord: function(grRecord)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsFunction(x_snc_stores.DevToolsGetParentRecord))
+		{
+			return DevToolsGetParentRecord(grRecord);
+		}
+		return false;
+	},	
+
+	GetLinkDirectory: function(linkdirectory)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsFunction(x_snc_stores.DevToolsGetLinkDirectory))
+		{
+			return DevToolsGetLinkDirectory(linkdirectory);
+		}
+		return linkdirectory;
+	},
+
+	GetFormatConfig: function(grRecord)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsFunction(x_snc_stores.DevToolsGetFormatConfig))
+		{
+			return DevToolsGetFormatConfig(grRecord);
+		}
+		return false;
+	},	
+	
+	GetApplicationStatus: function(status)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsFunction(x_snc_stores.DevToolsGetApplicationStatus))
+		{
+			status = DevToolsGetApplicationStatus(status);
+		}
+		return status;
+	},		
+
+	RenderDebugDump: function()
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		var strDebug = '';
+		if (IsFunction(x_snc_stores.DevToolsRenderDebugDump))
+		{
+			strDebug = x_snc_devtools.GetStringValue(DevToolsRenderDebugDump());
+		}
+		return strDebug;
+	},		
+	
+	GetInstancePipelineName: function(strInstanceName)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		var strInstancePipelineName = '';
+		if (IsFunction(x_snc_stores.DevToolsGetInstancePipelineName))
+		{
+			strInstancePipelineName =
+				x_snc_devtools.GetStringValue(DevToolsGetInstancePipelineName(strInstanceName));
+		}
+		return strInstancePipelineName;	
+	},
+
+	GetEncodedQueryToPreventUselessChecks: function(rules)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsFunction(x_snc_stores.DevToolsGetEncodedQueryToPreventUselessChecks))
+		{
+			return DevToolsGetEncodedQueryToPreventUselessChecks(rules);
+		}
+		return rules;
+	},	
+
+	AppVersionBaselineOnFinish: function(params)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsFunction(x_snc_stores.DevToolsAppVersionBaselineOnFinish))
+		{
+			return DevToolsAppVersionBaselineOnFinish(params);
+		}
+		return false;
+	},			
+
+	Prompt: function(vPrompt)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsFunction(x_snc_stores.DevToolsPrompt))
+		{
+			return DevToolsPrompt(vPrompt);
+		}
+		return false;
+	},	
+
+	IsTechnicalUser: function(grUser)
+	{
+		var IsFunction = x_snc_devtools.IsFunction;
+		if (IsFunction(x_snc_stores.DevToolsIsTechnicalUser))
+		{
+			return DevToolsIsTechnicalUser(grUser);
+		}
+		return false;
+	},				
+
+	
+	type: 'DevTools'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 09:54:22</sys_created_on>
+        <sys_id>3d40ba872bd2f2109083fe395e91bfc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevTools</sys_name>
+        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_script_include_3d40ba872bd2f2109083fe395e91bfc2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 09:54:22</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>
