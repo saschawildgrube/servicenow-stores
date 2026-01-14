@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>A Store viewer can read store records and related data.</description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>lWXXHd5MUHT7UC9vIwyo8diGsykfaei0mpalYEQj5mM=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_stores.viewer</name>

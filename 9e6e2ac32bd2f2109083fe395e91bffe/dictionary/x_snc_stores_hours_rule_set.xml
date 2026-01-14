@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9458a57b3bdeb61062bf612c95e45a6c" label="Hours Rule Set" max_length="40" name="x_snc_stores_hours_rule_set" type="collection">
+        <element choice="1" display="true" label="Subdivision" max_length="32" name="subdivision" reference="x_snc_geodata_country_subdivision" reference_qual="javascript: x_snc_geodata.GetReferenceQualifierSubdivisionsByCountry(current.country)" type="reference" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element label="Store" max_length="32" name="store" reference="x_snc_stores_store" type="reference"/>
+        <element label="Country" max_length="32" name="country" reference="core_country" type="reference"/>
+        <index name="index">
+            <element name="country"/>
+        </index>
+        <index name="index2">
+            <element name="store"/>
+        </index>
+        <index name="index3">
+            <element name="subdivision"/>
+        </index>
+    </element>
+</database>

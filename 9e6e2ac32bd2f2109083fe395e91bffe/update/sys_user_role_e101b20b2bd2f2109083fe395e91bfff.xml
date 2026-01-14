@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Store admins can create, modify and delete stores and associated data. </description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>UG+c9ISdWDjIrpfCc+/VYPYEvhADN/wZhnihQpQvAYc=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_stores.admin</name>

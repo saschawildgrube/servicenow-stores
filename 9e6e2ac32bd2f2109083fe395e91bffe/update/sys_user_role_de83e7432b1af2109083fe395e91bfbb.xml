@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Technical users that can access the "Stores API" via REST calls.</description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>yTcBGMn3bN6OVnL/a555Tc0nmYMxqV7354p3guHqcS4=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_stores.api</name>

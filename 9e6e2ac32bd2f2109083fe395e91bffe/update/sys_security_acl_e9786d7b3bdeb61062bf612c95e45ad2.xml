@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Default access control on x_snc_stores_hours_rule_set</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_snc_stores_hours_rule_set</name>
+        <operation display_value="delete">delete</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-14 12:36:01</sys_created_on>
+        <sys_id>e9786d7b3bdeb61062bf612c95e45ad2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_stores_hours_rule_set</sys_name>
+        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_security_acl_e9786d7b3bdeb61062bf612c95e45ad2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-14 12:36:01</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>
