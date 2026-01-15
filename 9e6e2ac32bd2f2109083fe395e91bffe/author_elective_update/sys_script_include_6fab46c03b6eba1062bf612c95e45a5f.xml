@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_stores.GetAllHoursRulesForStore</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns an array of objects representing all rules that apply to the given store.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GetAllHoursRulesForStore</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function GetAllHoursRulesForStore(vStore)
+{
+
+	return [];
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 09:49:49</sys_created_on>
+        <sys_id>6fab46c03b6eba1062bf612c95e45a5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetAllHoursRulesForStore</sys_name>
+        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_script_include_6fab46c03b6eba1062bf612c95e45a5f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-15 09:49:49</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</application>
+        <file_path/>
+        <instance_id>a8cbb5133b6b5e540fd412c5e4e45a1f</instance_id>
+        <instance_name>wildyokohama</instance_name>
+        <name>sys_script_include_6fab46c03b6eba1062bf612c95e45a5f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_snc_stores.GetAllHoursRulesForStore&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Returns an array of objects representing all rules that apply to the given store.&lt;/description&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;GetAllHoursRulesForStore&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[function GetAllHoursRulesForStore(vStore)
+{
+
+	return [];
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-01-15 09:49:49&lt;/sys_created_on&gt;&lt;sys_id&gt;6fab46c03b6eba1062bf612c95e45a5f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;GetAllHoursRulesForStore&lt;/sys_name&gt;&lt;sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores"&gt;9e6e2ac32bd2f2109083fe395e91bffe&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Stores WORK IN PROGRESS"&gt;9e6e2ac32bd2f2109083fe395e91bffe&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_6fab46c03b6eba1062bf612c95e45a5f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-01-15 09:49:49&lt;/sys_updated_on&gt;&lt;x_snc_devtools_sys_ui_script/&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1883384652</payload_hash>
+        <record_name>GetAllHoursRulesForStore</record_name>
+        <reverted_from/>
+        <source>6dafe2472bd2f2109083fe395e91bfd2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 09:49:51</sys_created_on>
+        <sys_id>c50c4ec03b6eba1062bf612c95e45a71</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19bc10fb6160000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-15 09:49:51</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>810c4ec0846eba1015281acabeb0cf70</update_guid>
+        <update_guid_history>810c4ec0846eba1015281acabeb0cf70:1883384652</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 14:02:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>24186fe939714c75ac2da6ba7ed1d1d1</sys_id>
+        <sys_metadata>6fab46c03b6eba1062bf612c95e45a5f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetAllHoursRulesForStore</sys_name>
+        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_scope_delete display_value="">032fae5915dd4128825dbfed956a4b21</sys_scope_delete>
+        <sys_update_name>sys_script_include_6fab46c03b6eba1062bf612c95e45a5f</sys_update_name>
+        <sys_update_version display_value="sys_script_include_6fab46c03b6eba1062bf612c95e45a5f">c50c4ec03b6eba1062bf612c95e45a71</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-15 14:02:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
