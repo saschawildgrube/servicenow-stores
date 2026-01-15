@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="8fdffd3b3bd2f61062bf612c95e45afb" label="Hours Rule" max_length="40" name="x_snc_stores_hours_rule" type="collection">
+        <element label="Day of Month" max_length="40" name="day_of_month" type="integer"/>
         <element label="Start" max_length="5" name="start" type="string"/>
         <element choice="1" label="Weekday" max_length="40" name="weekday" type="choice">
             <choice>
@@ -12,7 +13,28 @@
                 <element inactive_on_update="false" label="Friday" sequence="5" value="5"/>
             </choice>
         </element>
+        <element choice="1" label="Type" mandatory="true" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Weekday" sequence="1" value="weekday"/>
+                <element inactive_on_update="false" label="Annual" sequence="2" value="annual"/>
+            </choice>
+        </element>
         <element label="Hours Rule Set" mandatory="true" max_length="32" name="hours_rule_set" reference="x_snc_stores_hours_rule_set" type="reference"/>
+        <element choice="1" label="Month" mandatory="true" max_length="40" name="month" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="May" sequence="5" value="5"/>
+                <element inactive_on_update="false" label="January" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="August" sequence="8" value="8"/>
+                <element inactive_on_update="false" label="October" sequence="10" value="10"/>
+                <element inactive_on_update="false" label="April" sequence="4" value="4"/>
+                <element inactive_on_update="false" label="February" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="March" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="July" sequence="7" value="7"/>
+                <element inactive_on_update="false" label="November" sequence="11" value="11"/>
+                <element inactive_on_update="false" label="June" sequence="6" value="6"/>
+                <element inactive_on_update="false" label="December" sequence="12" value="12"/>
+            </choice>
+        </element>
         <element label="End" max_length="5" name="end" type="string"/>
         <index name="index">
             <element name="hours_rule_set"/>
