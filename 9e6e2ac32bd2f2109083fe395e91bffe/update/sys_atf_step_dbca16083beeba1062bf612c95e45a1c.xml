@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 10:54:27</sys_created_on>
+        <sys_id>dbca16083beeba1062bf612c95e45a1c</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_atf_step_dbca16083beeba1062bf612c95e45a1c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-15 11:03:59</sys_updated_on>
+        <table/>
+        <test display_value="Stores - GetAllHoursRuleSetsForStore">d3cad2083beeba1062bf612c95e45a12</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=dbca16083beeba1062bf612c95e45a1c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>dbca16083beeba1062bf612c95e45a1c</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 10:54:27</sys_created_on>
+        <sys_id>1bca16083beeba1062bf612c95e45a1e</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-15 11:03:59</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual)&#13;
+{&#13;
+	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
+	&#13;
+	test.SetResult(true);&#13;
+	&#13;
+	function TestCase_GetAllHoursRuleSetsForStore(vStore,vExpected)&#13;
+	{&#13;
+		function TestCase_GetAllHoursRuleSetsForStore_CheckResult(vInput,vExpected,vResult)&#13;
+		{&#13;
+			if (vExpected === false)&#13;
+			{&#13;
+				return (vExpected === vResult);&#13;
+			}&#13;
+			return (vExpected == vResult.length);&#13;
+		}&#13;
+		&#13;
+		test.TestCase(&#13;
+			'Function GetAllHoursRuleSetsForStore()',&#13;
+			GetAllHoursRuleSetsForStore,&#13;
+			{&#13;
+				'vStore': vStore&#13;
+			},&#13;
+			vExpected,&#13;
+			TestCase_GetAllHoursRuleSetsForStore_CheckResult);&#13;
+	}&#13;
+		&#13;
+	TestCase_GetAllHoursRuleSetsForStore(null,false);&#13;
+&#13;
+	var grCountry = new GlideRecord('core_country');&#13;
+	grCountry.initialize();&#13;
+	grCountry.name = 'TEST Land';&#13;
+	x_snc_devtools.GlideRecordInsert(grCountry);&#13;
+&#13;
+	var grStore = new GlideRecord('x_snc_stores_store');&#13;
+	grStore.initialize();&#13;
+	grStore.name = 'TEST_ATF_1';&#13;
+	grStore.country = grCountry.sys_id;&#13;
+	var strStoreSysId = grStore.insert();&#13;
+	&#13;
+	TestCase_GetAllHoursRuleSetsForStore(grStore,0);&#13;
+&#13;
+	var grHoursRuleSet = new GlideRecord('x_snc_stores_hours_rule_set');&#13;
+	grHoursRuleSet.initialize();&#13;
+	grHoursRuleSet.store = grStore.sys_id;&#13;
+	grHoursRuleSet.insert();&#13;
+&#13;
+	TestCase_GetAllHoursRuleSetsForStore(grStore,1);&#13;
+&#13;
+	var grHoursRuleSet = new GlideRecord('x_snc_stores_hours_rule_set');&#13;
+	grHoursRuleSet.initialize();&#13;
+	grHoursRuleSet.store = '';&#13;
+	grHoursRuleSet.insert();&#13;
+&#13;
+	TestCase_GetAllHoursRuleSetsForStore(grStore,1);&#13;
+&#13;
+	var grHoursRuleSet = new GlideRecord('x_snc_stores_hours_rule_set');&#13;
+	grHoursRuleSet.initialize();&#13;
+	grHoursRuleSet.store = grStore.sys_id;&#13;
+	grHoursRuleSet.insert();&#13;
+&#13;
+	TestCase_GetAllHoursRuleSetsForStore(grStore,2);&#13;
+&#13;
+	var grHoursRuleSet = new GlideRecord('x_snc_stores_hours_rule_set');&#13;
+	grHoursRuleSet.initialize();&#13;
+	grHoursRuleSet.country = grCountry.sys_id;&#13;
+	grHoursRuleSet.insert();&#13;
+&#13;
+	TestCase_GetAllHoursRuleSetsForStore(grStore,3);	&#13;
+&#13;
+&#13;
+	return test.GetResult();&#13;
+	&#13;
+})(outputs, steps, stepResult, assertEqual);</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>dbca16083beeba1062bf612c95e45a1c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 10:54:27</sys_created_on>
+        <sys_id>d3ca16083beeba1062bf612c95e45a1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-15 10:54:27</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+</record_update>

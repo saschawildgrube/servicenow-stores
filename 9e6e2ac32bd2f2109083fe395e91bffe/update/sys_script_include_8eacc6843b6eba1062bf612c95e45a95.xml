@@ -5,7 +5,7 @@
         <api_name>x_snc_stores.GetStoreRecord</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description>Returns the GLideRecord object representing the Store identified by number, Sys ID or number.</description>
+        <description>Returns the GlideRecord object representing the Store identified by number, Sys ID or number.</description>
         <mobile_callable>false</mobile_callable>
         <name>GetStoreRecord</name>
         <sandbox_callable>false</sandbox_callable>
@@ -52,14 +52,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-15 09:53:29</sys_created_on>
         <sys_id>8eacc6843b6eba1062bf612c95e45a95</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>GetStoreRecord</sys_name>
         <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
         <sys_update_name>sys_script_include_8eacc6843b6eba1062bf612c95e45a95</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-15 09:57:34</sys_updated_on>
+        <sys_updated_on>2026-01-15 10:54:41</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>
