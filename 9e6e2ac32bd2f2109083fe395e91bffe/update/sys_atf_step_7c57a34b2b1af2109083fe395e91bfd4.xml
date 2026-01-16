@@ -14,14 +14,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-12 13:54:52</sys_created_on>
         <sys_id>7c57a34b2b1af2109083fe395e91bfd4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
         <sys_update_name>sys_atf_step_7c57a34b2b1af2109083fe395e91bfd4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-12 14:15:07</sys_updated_on>
+        <sys_updated_on>2026-01-16 16:41:48</sys_updated_on>
         <table/>
         <test display_value="Stores - GetStores">7c57a34b2b1af2109083fe395e91bf01</test>
         <timeout/>
@@ -50,9 +50,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-12 13:54:52</sys_created_on>
         <sys_id>f057a34b2b1af2109083fe395e91bfd7</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-12 14:15:07</sys_updated_on>
+        <sys_updated_on>2026-01-16 16:41:48</sys_updated_on>
         <value>(function(outputs, steps, stepResult, assertEqual)&#13;
 {&#13;
 	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
@@ -71,23 +71,19 @@
 			var aExpected = x_snc_devtools.GetArrayValue(vExpected);&#13;
 			for (var nExpected = 0; nExpected &lt; aExpected.length; nExpected++)&#13;
 			{&#13;
-				var expected = aExpected[nExpected];&#13;
-				var strName = x_snc_devtools.GetStringValue(x_snc_devtools.GetValue(expected,'name'));&#13;
-				if (strName != '')&#13;
+				var strName = aExpected[nExpected];&#13;
+				var bFound = false;&#13;
+				for (var nStore = 0; nStore &lt; aStores.length; nStore++)&#13;
 				{&#13;
-					var bFound = false;&#13;
-					for (var nStore = 0; nStore &lt; aStores.length; nStores++)&#13;
+					var store = aStores[nStore];&#13;
+					if (strName == x_snc_devtools.GetValue(store,'name'))&#13;
 					{&#13;
-						var store = aStores[nStore];&#13;
-						if (strName == x_snc_devtools.GetValue(store,'name'))&#13;
-						{&#13;
-							bFound = true;&#13;
-						}&#13;
+						bFound = true;&#13;
 					}&#13;
-					if (bFound == false)&#13;
-					{&#13;
-						return false;&#13;
-					}&#13;
+				}&#13;
+				if (bFound == false)&#13;
+				{&#13;
+					return false;&#13;
 				}&#13;
 			}&#13;
 			return true;&#13;
@@ -109,7 +105,13 @@
 	grStore.name = 'TEST1';&#13;
 	grStore.insert();&#13;
 &#13;
-	TestCase_GetStores(['TEST1']);&#13;
+	var grStore = new GlideRecord('x_snc_stores_store');&#13;
+	grStore.initialize();&#13;
+	grStore.active = true;&#13;
+	grStore.name = 'TEST2';&#13;
+	grStore.insert();&#13;
+&#13;
+	TestCase_GetStores(['TEST2']);&#13;
 &#13;
 	&#13;
 	return test.GetResult();&#13;
