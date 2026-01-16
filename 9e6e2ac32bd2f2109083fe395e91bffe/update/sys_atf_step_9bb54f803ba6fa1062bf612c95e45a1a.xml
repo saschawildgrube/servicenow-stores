@@ -14,14 +14,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-15 14:02:02</sys_created_on>
         <sys_id>9bb54f803ba6fa1062bf612c95e45a1a</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
         <sys_update_name>sys_atf_step_9bb54f803ba6fa1062bf612c95e45a1a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-15 14:16:51</sys_updated_on>
+        <sys_updated_on>2026-01-16 15:31:01</sys_updated_on>
         <table/>
         <test display_value="Stores - GetActiveHoursRulesForStoreByDate">c3b5c3803ba6fa1062bf612c95e45a4f</test>
         <timeout/>
@@ -50,9 +50,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-15 14:02:02</sys_created_on>
         <sys_id>dbb54f803ba6fa1062bf612c95e45a1d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-15 14:16:52</sys_updated_on>
+        <sys_updated_on>2026-01-16 15:31:01</sys_updated_on>
         <value>(function(outputs, steps, stepResult, assertEqual)&#13;
 {&#13;
 	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
@@ -99,6 +99,7 @@
 	var grHoursRuleSet = new GlideRecord('x_snc_stores_hours_rule_set');&#13;
 	grHoursRuleSet.initialize();&#13;
 	grHoursRuleSet.store = grStore.sys_id;&#13;
+	grHoursRuleSet.active = true;&#13;
 	grHoursRuleSet.activation_start_date = '2026-02-01';&#13;
 	grHoursRuleSet.insert();&#13;
 &#13;
@@ -118,6 +119,7 @@
 	var grHoursRuleSet = new GlideRecord('x_snc_stores_hours_rule_set');&#13;
 	grHoursRuleSet.initialize();&#13;
 	grHoursRuleSet.store = grStore.sys_id;&#13;
+	grHoursRuleSet.active = true;&#13;
 	grHoursRuleSet.activation_start_date = '2025-12-31';&#13;
 	grHoursRuleSet.insert();&#13;
 &#13;
@@ -135,6 +137,7 @@
 	var grHoursRuleSet = new GlideRecord('x_snc_stores_hours_rule_set');&#13;
 	grHoursRuleSet.initialize();&#13;
 	grHoursRuleSet.store = grStore.sys_id;&#13;
+	grHoursRuleSet.active = true;&#13;
 	grHoursRuleSet.activation_start_date = '2025-01-01';&#13;
 	grHoursRuleSet.activation_end_date = '2025-12-31';&#13;
 	grHoursRuleSet.insert();&#13;
