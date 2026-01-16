@@ -19,7 +19,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-01-15 08:54:02</sys_updated_on>
         <table>x_snc_stores_hours_rule</table>
-        <ui_policy display_value="Hours Rule - Type - Weekday">ae0ffdc03beaba1062bf612c95e45ad8</ui_policy>
+        <ui_policy display_value="Hours Rule - type - open_weekday">ae0ffdc03beaba1062bf612c95e45ad8</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>true</visible>

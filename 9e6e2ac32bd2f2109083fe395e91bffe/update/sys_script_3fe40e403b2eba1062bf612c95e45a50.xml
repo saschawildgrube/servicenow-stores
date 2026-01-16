@@ -29,17 +29,37 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	if (current.type == 'weekday')
+	if (current.type == 'open_weekday')
 	{
 		current.month = '';
 		current.day_of_month = '';
+		current.date_start = '';
+		current.date_end = '';
+
 	}
-	if (current.type == 'annual')
+	if (current.type == 'closed_annual')
 	{
 		current.weekday = '';
 		current.start = '';
 		current.end = '';
+		current.date_start = '';
+		current.date_end = '';		
 	}
+	if (current.type == 'closed_period')
+	{
+		current.weekday = '';
+		current.month = '';
+		current.day_of_month = '';
+		current.start = '';
+		current.end = '';
+	}
+	if (current.type == 'open_period')
+	{
+		current.weekday = '';
+		current.month = '';
+		current.day_of_month = '';
+	}
+
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -48,7 +68,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3fe40e403b2eba1062bf612c95e45a50</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Hours Rule - Type</sys_name>
         <sys_overrides/>
         <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
@@ -56,7 +76,7 @@
         <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
         <sys_update_name>sys_script_3fe40e403b2eba1062bf612c95e45a50</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-15 09:19:36</sys_updated_on>
+        <sys_updated_on>2026-01-16 10:31:59</sys_updated_on>
         <template/>
         <when>before</when>
         <x_snc_datasilos_created>false</x_snc_datasilos_created>

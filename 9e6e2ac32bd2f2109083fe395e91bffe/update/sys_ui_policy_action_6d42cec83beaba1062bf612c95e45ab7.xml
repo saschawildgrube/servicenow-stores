@@ -19,7 +19,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-01-15 09:07:28</sys_updated_on>
         <table>x_snc_stores_hours_rule</table>
-        <ui_policy display_value="Hours Rule - Type - Annual">78c006083beaba1062bf612c95e45ab3</ui_policy>
+        <ui_policy display_value="Hours Rule - type - closed_annual">78c006083beaba1062bf612c95e45ab3</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>true</visible>

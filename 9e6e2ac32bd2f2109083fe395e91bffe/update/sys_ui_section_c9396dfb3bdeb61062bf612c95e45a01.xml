@@ -4,139 +4,153 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>b01b4a403b6eba1062bf612c95e45afe</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>28d8e3d03ba2fe1062bf612c95e45a1e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>e0d8e3d03ba2fe1062bf612c95e45a1f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>7c1b4a403b6eba1062bf612c95e45afe</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>acd8e3d03ba2fe1062bf612c95e45a1f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>type</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>381b4a403b6eba1062bf612c95e45aff</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>68d8e3d03ba2fe1062bf612c95e45a20</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>country</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>f01b8a403b6eba1062bf612c95e45a00</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>24d8e3d03ba2fe1062bf612c95e45a21</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>subdivision</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>bc1b8a403b6eba1062bf612c95e45a00</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>ecd8e3d03ba2fe1062bf612c95e45a21</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>store</element>
-            <position>5</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>781b8a403b6eba1062bf612c95e45a01</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>a8d8e3d03ba2fe1062bf612c95e45a22</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>6</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>341b8a403b6eba1062bf612c95e45a02</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>64d8e3d03ba2fe1062bf612c95e45a23</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>activation_start_date</element>
-            <position>7</position>
+            <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>fc1b8a403b6eba1062bf612c95e45a02</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>20d8e3d03ba2fe1062bf612c95e45a24</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>activation_end_date</element>
-            <position>8</position>
+            <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>b81b8a403b6eba1062bf612c95e45a03</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>e8d8e3d03ba2fe1062bf612c95e45a24</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>9</position>
+            <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-15 09:45:44</sys_created_on>
-            <sys_id>741b8a403b6eba1062bf612c95e45a04</sys_id>
+            <sys_created_on>2026-01-16 11:13:48</sys_created_on>
+            <sys_id>a4d8e3d03ba2fe1062bf612c95e45a25</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_stores_hours_rule_set" sys_domain="global" view="Default view">c9396dfb3bdeb61062bf612c95e45a01</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-15 09:45:44</sys_updated_on>
+            <sys_updated_on>2026-01-16 11:13:48</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

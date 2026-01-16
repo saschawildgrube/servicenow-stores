@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="8fdffd3b3bd2f61062bf612c95e45afb" label="Hours Rule" max_length="40" name="x_snc_stores_hours_rule" type="collection">
         <element label="Day of Month" max_length="40" name="day_of_month" type="integer"/>
+        <element label="Date End" max_length="40" name="date_end" type="glide_date"/>
         <element label="Start" max_length="5" name="start" type="string"/>
         <element choice="1" label="Weekday" max_length="40" name="weekday" type="choice">
             <choice>
@@ -15,8 +16,10 @@
         </element>
         <element choice="1" label="Type" mandatory="true" max_length="40" name="type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Weekday" sequence="1" value="weekday"/>
-                <element inactive_on_update="false" label="Annual" sequence="2" value="annual"/>
+                <element inactive_on_update="false" label="Open during a period" sequence="4" value="open_period"/>
+                <element inactive_on_update="false" label="Open on weekday" sequence="1" value="open_weekday"/>
+                <element inactive_on_update="false" label="Closed during a period" sequence="3" value="closed_period"/>
+                <element inactive_on_update="false" label="Closed each year on a specific day" sequence="2" value="closed_annual"/>
             </choice>
         </element>
         <element label="Hours Rule Set" mandatory="true" max_length="32" name="hours_rule_set" reference="x_snc_stores_hours_rule_set" type="reference"/>
@@ -36,6 +39,7 @@
             </choice>
         </element>
         <element label="End" max_length="5" name="end" type="string"/>
+        <element label="Date Start" max_length="40" name="date_start" type="glide_date"/>
         <index name="index">
             <element name="hours_rule_set"/>
         </index>

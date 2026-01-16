@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter_map">
+    <sys_ws_query_parameter_map action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ws_query_parameter_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 14:27:53</sys_created_on>
+        <sys_id>3f9bc3403be6fa1062bf612c95e45aa8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>486b87003be6fa1062bf612c95e45a60</sys_name>
+        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_map_3f9bc3403be6fa1062bf612c95e45aa8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-15 14:27:53</sys_updated_on>
+        <web_service_operation display_value="Get Store">2579c7c83ba6fa1062bf612c95e45a73</web_service_operation>
+        <web_service_query_parameter display_value="store">486b87003be6fa1062bf612c95e45a60</web_service_query_parameter>
+    </sys_ws_query_parameter_map>
+</record_update>

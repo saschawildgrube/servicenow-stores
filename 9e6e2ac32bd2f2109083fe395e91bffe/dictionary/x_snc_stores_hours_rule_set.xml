@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="9458a57b3bdeb61062bf612c95e45a6c" label="Hours Rule Set" max_length="40" name="x_snc_stores_hours_rule_set" type="collection">
+        <element label="Short Description" max_length="200" name="short_description" type="string"/>
         <element choice="1" label="Type" max_length="40" name="type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Region" sequence="2" value="region"/>
