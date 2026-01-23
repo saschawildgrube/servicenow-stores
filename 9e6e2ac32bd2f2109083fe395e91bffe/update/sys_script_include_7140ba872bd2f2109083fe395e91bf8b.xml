@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_stores.AppGetDependencies</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>Retrieves information about the app's dependencies to other apps and required versions.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>AppGetDependencies</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function AppGetDependencies()
+{
+	return x_snc_devtools.GetValue(
+		x_snc_devtools.GetPackageDependencyTree(
+			'x_snc_stores'),
+		'_dependencies');
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 09:54:21</sys_created_on>
+        <sys_id>7140ba872bd2f2109083fe395e91bf8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AppGetDependencies</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_script_include_7140ba872bd2f2109083fe395e91bf8b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 09:54:21</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>

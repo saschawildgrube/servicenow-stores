@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_stores.GetStore</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns a clean object representing a Store.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GetStore</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function GetStore(vStore)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var Clone = x_snc_devtools.Clone;
+	var GetCountryRecord = x_snc_devtools.GetCountryRecord;
+	
+	var grStore = GetStoreRecord(vStore);
+	if (IsValidRecord(grStore) == false)
+	{
+		return false;
+	}
+	var store = Clone(grStore);
+
+	delete store.sys_created_on;
+	delete store.sys_created_by;
+	delete store.sys_meta;
+	delete store.sys_mod_count;
+	delete store.sys_updated_on;
+	delete store.sys_updated_by;
+	delete store.sys_tags;
+
+	if (store.country != '')
+	{
+		var grCountry = GetCountryRecord(store.country);
+		if (IsValidRecord(grCountry) == true)
+		{
+			store.country_name = grCountry.getDisplayValue();
+		}
+
+		if (store.subdivision != '')
+		{
+			var grSubdivision = x_snc_geodata.GetCountrySubdivisionRecord(store.subdivision);
+			if (IsValidRecord(grSubdivision) == true)
+			{
+				store.subdivision_name = grSubdivision.getDisplayValue();
+			}
+		}
+	}
+
+	return store;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 14:40:23</sys_created_on>
+        <sys_id>af2e87083be6fa1062bf612c95e45a48</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>GetStore</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_script_include_af2e87083be6fa1062bf612c95e45a48</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-23 10:44:06</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>

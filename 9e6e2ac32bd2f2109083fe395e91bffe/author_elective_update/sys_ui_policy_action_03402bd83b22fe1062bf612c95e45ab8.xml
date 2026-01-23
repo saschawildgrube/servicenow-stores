@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>date_start</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-16 10:36:43</sys_created_on>
+        <sys_id>03402bd83b22fe1062bf612c95e45ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>date_start</sys_name>
+        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_ui_policy_action_03402bd83b22fe1062bf612c95e45ab8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-16 10:36:43</sys_updated_on>
+        <table>x_snc_stores_hours_rule</table>
+        <ui_policy display_value="Hours Rule - type - closed_annual">78c006083beaba1062bf612c95e45ab3</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=03402bd83b22fe1062bf612c95e45ab8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</application>
+        <file_path/>
+        <instance_id>a8cbb5133b6b5e540fd412c5e4e45a1f</instance_id>
+        <instance_name>wildyokohama</instance_name>
+        <name>sys_ui_policy_action_03402bd83b22fe1062bf612c95e45ab8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>date_start</field><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-01-16 10:36:43</sys_created_on><sys_id>03402bd83b22fe1062bf612c95e45ab8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>date_start</sys_name><sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package><sys_policy/><sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope><sys_update_name>sys_ui_policy_action_03402bd83b22fe1062bf612c95e45ab8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-01-16 10:36:43</sys_updated_on><table>x_snc_stores_hours_rule</table><ui_policy display_value="Hours Rule - type - closed_annual">78c006083beaba1062bf612c95e45ab3</ui_policy><value/><value_action>ignore</value_action><visible>false</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=03402bd83b22fe1062bf612c95e45ab8"/></record_update>]]></payload>
+        <payload_hash>-762390173</payload_hash>
+        <record_name>date_start</record_name>
+        <reverted_from/>
+        <source>6dafe2472bd2f2109083fe395e91bfd2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-16 10:36:43</sys_created_on>
+        <sys_id>99506bd83b22fe1062bf612c95e45ad3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19bc660fcd70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-16 10:36:43</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>55506bd8bc22fe108ad7f28bf8317dd2</update_guid>
+        <update_guid_history>55506bd8bc22fe108ad7f28bf8317dd2:-762390173</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-16 10:37:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>08854cefa54c49008203f925446c4400</sys_id>
+        <sys_metadata>03402bd83b22fe1062bf612c95e45ab8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>date_start</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_parent display_value="Hours Rule - type - closed_annual">78c006083beaba1062bf612c95e45ab3</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_scope_delete display_value="">032fae5915dd4128825dbfed956a4b21</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_03402bd83b22fe1062bf612c95e45ab8</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_03402bd83b22fe1062bf612c95e45ab8">99506bd83b22fe1062bf612c95e45ad3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-16 10:37:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

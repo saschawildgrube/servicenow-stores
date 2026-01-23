@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_stores.GetActiveHoursRulesForStoreByDate</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns Hours Rules relevant for the given Store that are active on the given date.&#13;
+This includes Hours Rules which apply to the past and the future.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GetActiveHoursRulesForStoreByDate</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function GetActiveHoursRulesForStoreByDate(vStore,vDate)
+{
+	var RenderDate = x_snc_devtools.RenderDate;
+	strDate = RenderDate(vDate);
+
+	var aRules = GetAllHoursRulesForStore(vStore);
+	if (aRules === false)
+	{
+		return false;
+	}
+	
+	var aActiveRules = [];
+
+	for (var nRule = 0; nRule < aRules.length; nRule++)
+	{
+		var rule = aRules[nRule];
+
+		if (rule.active == true)
+		{
+			var strActivationStartDate = rule.activation_start_date;
+			if (strActivationStartDate != '')
+			{
+				if (strActivationStartDate <= strDate)
+				{
+					var strActivationEndDate = rule.activation_end_date;
+					if (strActivationEndDate == '' || (strDate < strActivationEndDate) )
+					{
+						delete rule.active;
+						aActiveRules.push(rule);
+					}
+				}
+			}
+		} 
+	}
+
+	return aActiveRules;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 14:01:11</sys_created_on>
+        <sys_id>6a3283883b66fa1062bf612c95e45aec</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>GetActiveHoursRulesForStoreByDate</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_script_include_6a3283883b66fa1062bf612c95e45aec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-23 10:44:06</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>

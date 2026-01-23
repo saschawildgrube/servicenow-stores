@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description>Checks if all documented dependencies of the application are installed in a compatible version
+</description>
+        <display_name>DevTools - Check app dependencies</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="DevTools - Check app dependencies">e4b8e71e1bbb5d105b76777d8b4bcb35</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 10:03:14</sys_created_on>
+        <sys_id>bf32fa8b2bd2f2109083fe395e91bf2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevTools - Check app dependencies</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_atf_step_bf32fa8b2bd2f2109083fe395e91bf2c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 10:03:14</sys_updated_on>
+        <table/>
+        <test display_value="Stores - Installation">8e40ba872bd2f2109083fe395e91bfeb</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=bf32fa8b2bd2f2109083fe395e91bf2c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>bf32fa8b2bd2f2109083fe395e91bf2c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 10:03:14</sys_created_on>
+        <sys_id>73427e8b2bd2f2109083fe395e91bf0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-12 10:03:14</sys_updated_on>
+        <value>9e6e2ac32bd2f2109083fe395e91bffe</value>
+        <variable display_value="Application">abfabdb693e1aa50959b7fda2bba10e4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_e4b8e71e1bbb5d105b76777d8b4bcb35^id=bf32fa8b2bd2f2109083fe395e91bf2c"/>
+</record_update>

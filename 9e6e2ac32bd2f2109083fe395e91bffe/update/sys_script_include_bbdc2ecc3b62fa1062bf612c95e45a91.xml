@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_stores.GetAllHoursRulesForStore</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns an array of objects representing all individual Hours Rules relating to a given Store.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GetAllHoursRulesForStore</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function GetAllHoursRulesForStore(vStore)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var Clone = x_snc_devtools.Clone;
+
+	var grStore = GetStoreRecord(vStore);
+	if (IsValidRecord(grStore) == false)	
+	{
+		return false;
+	}
+
+	var aRules = [];
+
+	var aHoursRuleSets = GetAllHoursRuleSetsForStore(grStore);
+	if (aHoursRuleSets === false)
+	{
+		return false;
+	}
+
+	for (var nSet = 0; nSet < aHoursRuleSets.length; nSet++)
+	{
+		var hoursruleset = aHoursRuleSets[nSet];
+		var grHoursRule = new GlideRecord('x_snc_stores_hours_rule');
+		grHoursRule.addQuery('hours_rule_set','=',hoursruleset.sys_id);
+		grHoursRule.query();
+		while (grHoursRule.next())
+		{
+			var rule = Clone(grHoursRule);
+			rule.active = hoursruleset.active;
+			rule.activation_start_date = hoursruleset.activation_start_date;
+			rule.activation_end_date = hoursruleset.activation_end_date;
+
+			delete rule.sys_created_on;
+			delete rule.sys_created_by;
+			delete rule.sys_meta;
+			delete rule.sys_mod_count;
+			delete rule.sys_updated_on;
+			delete rule.sys_updated_by;
+			delete rule.sys_tags;
+
+
+			aRules.push(rule);
+		}
+	}
+
+	return aRules;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 12:20:12</sys_created_on>
+        <sys_id>bbdc2ecc3b62fa1062bf612c95e45a91</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>GetAllHoursRulesForStore</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_script_include_bbdc2ecc3b62fa1062bf612c95e45a91</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-23 10:44:06</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>

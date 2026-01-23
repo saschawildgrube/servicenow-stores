@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_snc_stores_manual.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<div style="padding-left: 20px;">
+<span style="visibility: hidden;">_CUT_HERE_</span>
+	<g2:no_escape>$[
+		var docapi = new x_snc_devtools.DocumentationAPI('x_snc_stores');
+		docapi.RenderHeader();
+	]</g2:no_escape>
+	
+	<p>Welcome to Stores - created and maintained by&#160;<a href="mailto:sascha.wildgrube@servicenow.com">Sascha Wildgrube</a>.</p>
+
+	<h2>Overview</h2> 
+	<g2:no_escape>$[
+		docapi.RenderDescription();
+	]</g2:no_escape>
+
+	<h2>Table of Contents</h2>
+	<g2:no_escape>$[x_snc_devtools.HtmlRenderTableOfContents()]</g2:no_escape>		
+	
+	<h2>Disclaimer</h2>
+	<g2:no_escape>$[docapi.RenderDisclaimer()]</g2:no_escape>	
+	
+	<h2>System Requirements</h2>
+	<ul>
+		<g2:no_escape>$[
+			docapi.RenderSystemRequirements(
+				'Yokohama,Zurich',
+				true,
+				AppGetDependencies());
+		]</g2:no_escape>	
+	</ul>
+	
+	<h2>Installation</h2>
+	<ol>
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsImportFromSourceControl(
+				'DevTools',
+				'https://github.com/saschawildgrube/servicenow-devtools',
+				true,
+				'https://www.wildgrube.com/servicenow-devtools/');
+		]</g2:no_escape>
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsImportFromSourceControl(
+				'Stores',
+				'https://github.com/saschawildgrube/servicenow-stores');
+		]</g2:no_escape>		
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsAppInstall();
+		]</g2:no_escape>		
+	</ol>
+
+	<h2>Features</h2> 
+	<ul>
+		<li>Manage Store base data.</li>
+		<li>Manage Store specific opening hours.</li>
+		<li>Prepare changes to opening hours by deciding when specific rules are active.</li>
+		<li>Consider nation-wide and regional public holidays.</li>
+		<li>Provide relevant opening hours rules for a store on a given date via REST API.</li>
+	</ul>
+
+	<h2>Reference</h2>
+
+	<h3>Configuration Options</h3>
+	<g2:no_escape>$[docapi.RenderProperties()]</g2:no_escape>
+	
+	<h3>Roles</h3>
+	<g2:no_escape>$[docapi.RenderRoles()]</g2:no_escape>		
+
+<!--
+	<h3>Connection and Credential Aliases</h3>
+	<g2:no_escape>$[docapi.RenderConnectionAndCredentialAliases()]</g2:no_escape>
+-->	
+	
+	<h3>Tables</h3>
+	<g2:no_escape>$[docapi.RenderTables()]</g2:no_escape>	
+
+<!--
+	<h3>UI Actions</h3>
+	<g2:no_escape>$[docapi.RenderUIActions()]</g2:no_escape>		
+-->	
+
+	<h3>Script Includes</h3>
+	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>
+	
+<!--
+	<h3>UI Scripts</h3>
+	<g2:no_escape>$[docapi.RenderUIScripts()]</g2:no_escape>	
+-->
+	<h3>REST APIs</h3>
+	<g2:no_escape>$[docapi.RenderRestApis()]</g2:no_escape>		
+	
+<!--
+	
+	<h3>Extension Points</h3>
+	<g2:no_escape>$[docapi.RenderExtensionPoints()]</g2:no_escape>		
+
+	<h3>Business Rules</h3>
+	<g2:no_escape>$[docapi.RenderBusinessRules()]</g2:no_escape>	
+-->
+
+	<h2>Dependencies</h2>
+	<g2:no_escape>$[docapi.RenderDependencies()]</g2:no_escape>		
+
+	<h2>Technical Debt</h2>
+	<g2:no_escape>$[docapi.RenderTechnicalDebt()]</g2:no_escape>			
+	
+	<h2>License</h2>
+	<g2:no_escape>$[docapi.RenderCopyright(2026,'Sascha Wildgrube')]</g2:no_escape>
+	<g2:no_escape>$[docapi.RenderLicense()]</g2:no_escape>
+	
+	<h2 toc-ignore-children="true">Release Notes</h2>
+
+	<h3>1.0.0 - 2026-01-23</h3>
+	<p>First baselined version</p>
+
+<span style="visibility: hidden;">_CUT_HERE_</span>
+</div>
+</j:jelly>]]></html>
+        <name>manual</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 09:54:22</sys_created_on>
+        <sys_id>8e40ba872bd2f2109083fe395e91bfd3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>manual</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_ui_page_8e40ba872bd2f2109083fe395e91bfd3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-23 10:43:12</sys_updated_on>
+    </sys_ui_page>
+</record_update>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>GET</http_method>
+        <name>Get Store</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var GetAppRecord = x_snc_devtools.GetAppRecord;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var IsUserHasRoleExactly = x_snc_devtools.IsUserHasRoleExactly;
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var Clone = x_snc_devtools.Clone;
+	var RenderDate = x_snc_devtools.RenderDate;
+	
+
+	function GetParam(strParam)
+	{
+		var queryParams = request.queryParams;
+		return x_snc_devtools.GetStringValue(x_snc_devtools.GetValue(queryParams,strParam));
+	}
+
+	function Error(strMessage,strDetails)
+	{
+		var myError = new sn_ws_err.ServiceError();
+		myError.setStatus(200);
+		myError.setMessage(strMessage);
+		myError.setDetail(strDetails);
+		response.setError(myError);	
+	}
+	
+	if (IsUserHasRoleExactly('x_snc_stores.api') == false)
+	{
+		Error('User Not Authorized','');
+		return;
+	}
+
+	if (IsActive() == false)
+	{
+		Error('INACTIVE','The Stores app is inactive.');
+		return;
+	}
+
+	var strStoreIdentifier = GetParam('store');
+
+	if (strStoreIdentifier == '')
+	{
+		Error('STORE_NOT_SPECIFIED','No Store is specified.');
+		return;
+	}
+
+
+	var grStore = GetStoreRecord(strStoreIdentifier);
+	if (IsValidRecord(grStore) == false)
+	{
+		Error('STORE_NOT_FOUND','The specified Store could not be found.');
+		return;
+	}
+
+	if (grStore.active == false)
+	{
+		Error('STORE_INACTIVE','The specified Store is inactive.');
+		return;
+	}
+		
+	
+	var body = {};
+	body.message = 'SUCCESS';
+	body.store = GetStore(grStore);
+
+	var strDate = GetParam('date');
+
+	if (strDate == '')
+	{
+		body.store.hours_rules = GetAllHoursRulesForStore(grStore);
+	}
+	else
+	{
+		if (RenderDate(strDate) != strDate)
+		{
+			Error('DATE_INVALID','The specified date is invalid. Use this format: "YYYY-MM-DD"!');
+			return;			
+		}
+		body.store.hours_rules = GetActiveHoursRulesForStoreByDate(grStore,strDate);
+
+	}
+	
+	response.setBody(body);
+	
+	return;
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_snc_stores/stores/store</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/store</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description>Returns the store data including opening hours</short_description>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 14:18:57</sys_created_on>
+        <sys_id>2579c7c83ba6fa1062bf612c95e45a73</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Get Store</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_ws_operation_2579c7c83ba6fa1062bf612c95e45a73</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-23 10:27:49</sys_updated_on>
+        <web_service_definition display_value="Stores API">5142638f2bd6f2109083fe395e91bf87</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

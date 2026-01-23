@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
+    <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
+        <abort_on_failure>false</abort_on_failure>
+        <order>200</order>
+        <sys_class_name>sys_atf_test_suite_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-12 14:10:00</sys_created_on>
+        <sys_id>e2caa78f2b1af2109083fe395e91bf19</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>6ecaa78f2b1af2109083fe395e91bf15</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_atf_test_suite_test_e2caa78f2b1af2109083fe395e91bf19</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-16 11:09:55</sys_updated_on>
+        <test display_value="Stores - Stores API - Get Stores">6ecaa78f2b1af2109083fe395e91bf15</test>
+        <test_suite display_value="Stores">4a40ba872bd2f2109083fe395e91bfd8</test_suite>
+    </sys_atf_test_suite_test>
+</record_update>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_stores.GetAllHoursRuleSetsForStore</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns an array of objects representing all Hour Rule Sets that are relevant for the given Store. </description>
+        <mobile_callable>false</mobile_callable>
+        <name>GetAllHoursRuleSetsForStore</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function GetAllHoursRuleSetsForStore(vStore)
+{
+	var IsValidRecord = x_snc_devtools.IsValidRecord;
+	var Clone = x_snc_devtools.Clone;
+	var GetCountryRecord = x_snc_devtools.GetCountryRecord;
+	var GetRecord = x_snc_devtools.GetRecord;
+		
+	var grStore = GetStoreRecord(vStore);
+	if (IsValidRecord(grStore) == false)
+	{
+		return false;
+	}
+
+	var aHoursRuleSets = [];
+
+	var grHoursRuleSets = new GlideRecord('x_snc_stores_hours_rule_set');
+	grHoursRuleSets.addQuery('store','=',grStore.sys_id);
+	grHoursRuleSets.query();
+	while (grHoursRuleSets.next())
+	{
+		var hoursruleset = Clone(grHoursRuleSets);
+		aHoursRuleSets.push(hoursruleset);
+	}
+
+	var grCountry = GetCountryRecord(grStore.country);
+	if (IsValidRecord(grCountry) == true)
+	{
+		var grHoursRuleSets = new GlideRecord('x_snc_stores_hours_rule_set');
+		grHoursRuleSets.addQuery('country','=',grCountry.sys_id);
+		grHoursRuleSets.addQuery('subdivision','=','');
+		grHoursRuleSets.query();
+		while (grHoursRuleSets.next())
+		{
+			var hoursruleset = Clone(grHoursRuleSets);
+			aHoursRuleSets.push(hoursruleset);
+		}
+
+		var grSubdivision = GetRecord('x_snc_geodata_country_subdivision',grStore.subdivision);
+		if (IsValidRecord(grSubdivision) == true)
+		{
+			var grHoursRuleSets = new GlideRecord('x_snc_stores_hours_rule_set');
+			grHoursRuleSets.addQuery('country','=',grCountry.sys_id);
+			grHoursRuleSets.addQuery('subdivision','=',grSubdivision.sys_id);
+			grHoursRuleSets.query();
+			while (grHoursRuleSets.next())
+			{
+				var hoursruleset = Clone(grHoursRuleSets);
+				aHoursRuleSets.push(hoursruleset);
+			}
+		}		
+	}
+
+	return aHoursRuleSets;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-15 09:51:07</sys_created_on>
+        <sys_id>661cc2043b6eba1062bf612c95e45a72</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>GetAllHoursRuleSetsForStore</sys_name>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_update_name>sys_script_include_661cc2043b6eba1062bf612c95e45a72</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-23 10:44:06</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+</record_update>
