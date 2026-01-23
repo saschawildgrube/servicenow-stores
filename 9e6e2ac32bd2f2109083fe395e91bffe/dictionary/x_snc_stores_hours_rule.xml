@@ -16,6 +16,7 @@
         </element>
         <element choice="1" label="Type" mandatory="true" max_length="40" name="type" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Additional work during a period" sequence="5" value="work_period"/>
                 <element inactive_on_update="false" label="Open during a period" sequence="4" value="open_period"/>
                 <element inactive_on_update="false" label="Open on weekday" sequence="1" value="open_weekday"/>
                 <element inactive_on_update="false" label="Closed during a period" sequence="3" value="closed_period"/>

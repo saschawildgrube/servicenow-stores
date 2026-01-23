@@ -84,7 +84,7 @@
 			Error('DATE_INVALID','The specified date is invalid. Use this format: "YYYY-MM-DD"!');
 			return;			
 		}
-		body.store.hours_rules = GetActiveHoursRulesForStore(grStore,strDate);
+		body.store.hours_rules = GetActiveHoursRulesForStoreByDate(grStore,strDate);
 
 	}
 	
@@ -106,14 +106,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-15 14:18:57</sys_created_on>
         <sys_id>2579c7c83ba6fa1062bf612c95e45a73</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Get Store</sys_name>
         <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
         <sys_update_name>sys_ws_operation_2579c7c83ba6fa1062bf612c95e45a73</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-16 16:35:07</sys_updated_on>
+        <sys_updated_on>2026-01-23 10:27:49</sys_updated_on>
         <web_service_definition display_value="Stores API">5142638f2bd6f2109083fe395e91bf87</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
