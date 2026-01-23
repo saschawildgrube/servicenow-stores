@@ -6,9 +6,9 @@
         <sys_id>7ef57a032b16f2109083fe395e91bfdc</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_stores_store.x_snc_stores.admin</sys_name>
-        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
         <sys_security_acl display_value="x_snc_stores_store">bef57a032b16f2109083fe395e91bfd6</sys_security_acl>
         <sys_update_name>sys_security_acl_role_7ef57a032b16f2109083fe395e91bfdc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
