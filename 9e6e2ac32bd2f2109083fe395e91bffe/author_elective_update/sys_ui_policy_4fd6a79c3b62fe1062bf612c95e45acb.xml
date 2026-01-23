@@ -44,7 +44,7 @@
     </sys_ui_policy>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</application>
+        <application display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</application>
         <file_path/>
         <instance_id>a8cbb5133b6b5e540fd412c5e4e45a1f</instance_id>
         <instance_name>wildyokohama</instance_name>
@@ -81,10 +81,10 @@
         <sys_metadata>4fd6a79c3b62fe1062bf612c95e45acb</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Hours Rule - type - reset</sys_name>
-        <sys_package display_value="Stores WORK IN PROGRESS" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
+        <sys_package display_value="Stores" source="x_snc_stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_package>
         <sys_parent display_value="Hours Rule">8fdffd3b3bd2f61062bf612c95e45afb</sys_parent>
         <sys_policy/>
-        <sys_scope display_value="Stores WORK IN PROGRESS">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
+        <sys_scope display_value="Stores">9e6e2ac32bd2f2109083fe395e91bffe</sys_scope>
         <sys_scope_delete display_value="">032fae5915dd4128825dbfed956a4b21</sys_scope_delete>
         <sys_update_name>sys_ui_policy_4fd6a79c3b62fe1062bf612c95e45acb</sys_update_name>
         <sys_update_version display_value="sys_ui_policy_4fd6a79c3b62fe1062bf612c95e45acb">4fd62b9c3b62fe1062bf612c95e45a5d</sys_update_version>
